@@ -3,3 +3,71 @@
 @import 'reset';
 @import 'global';
 @import 'media';
+
+
+
+
+.header{
+  background-image: url('../images/volna_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  &__menu{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+    align-items: center;
+    & li{
+      position: relative;
+    }
+  }
+  &__menu-link{
+    font-size: 25px;
+    &:hover{
+      border-bottom: 4px solid #00B2A0;
+      color: #00B2A0;
+    }
+  }
+  &__submenu-list{
+    display: none;
+  }
+  &__menu-list{
+    display: flex;
+    & > li{
+      padding: 0 30px 0 0;
+      &:hover .header__submenu-list{
+        display: block;
+      }
+    }
+  }
+  &__menu-item{
+  }
+  &__submenu-list{
+    min-width: 300px;
+    text-align: left;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    padding: 50px 0 0 0;
+    background-color: rgba(0, 0, 0, .5);
+    font-size: 20px;
+    & li{
+      padding-top: 10px;
+    }
+  }
+  &__submenu-link{
+    color: white;
+    padding: 10px;
+    &:hover{
+      color: #00B2A0;
+    }
+  }
+  &__menu-link--active{
+    color: #00B2A0;
+  }
+}
+
+
+
+
+
